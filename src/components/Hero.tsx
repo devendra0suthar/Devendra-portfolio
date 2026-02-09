@@ -133,7 +133,8 @@ export default function Hero() {
           </a>
           <a
             href={personalInfo.resumeUrl}
-            download="Devendra_Suthar_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-foreground/50 hover:text-accent transition-colors duration-200 text-xl"
             aria-label="Download Resume"
           >
