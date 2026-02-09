@@ -69,6 +69,12 @@ html {
   background-size: 60px 60px;
 }
 
+/* Logo gradient animation */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 /* Section styles */
 section {
   position: relative;

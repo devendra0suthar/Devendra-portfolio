@@ -63,9 +63,9 @@ export default function Skills() {
     <section id="skills" className="py-24 px-6 grid-bg">
       <div ref={ref} className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+          animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+          transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
@@ -78,10 +78,11 @@ export default function Skills() {
           {categories.map(([category, items], catIndex) => (
             <motion.div
               key={category}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-              className="bg-card-bg border border-card-border rounded-xl p-6"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ duration: 0.6, delay: catIndex * 0.15 }}
+              whileHover={{ borderColor: "rgba(0,240,255,0.3)", y: -4 }}
+              className="bg-card-bg border border-card-border rounded-xl p-6 transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(0,240,255,0.1)]"
             >
               <h3 className="text-lg font-mono text-accent mb-6">
                 {`// ${category}`}
@@ -92,13 +93,16 @@ export default function Skills() {
                   return (
                     <motion.div
                       key={skill.name}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                      initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                      animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : {}}
                       transition={{
-                        duration: 0.3,
-                        delay: catIndex * 0.1 + i * 0.05,
+                        duration: 0.4,
+                        delay: catIndex * 0.15 + i * 0.08,
+                        type: "spring",
+                        stiffness: 200,
                       }}
-                      className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-accent/5 hover:border-accent/20 border border-transparent transition-all duration-200 group"
+                      whileHover={{ scale: 1.15, y: -4 }}
+                      className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-accent/5 hover:border-accent/20 border border-transparent transition-all duration-200 group cursor-default"
                     >
                       {IconComponent && (
                         <IconComponent className="text-2xl text-foreground/50 group-hover:text-accent transition-colors duration-200" />
