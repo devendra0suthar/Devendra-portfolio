@@ -44,7 +44,7 @@ export default function Navbar() {
           href="#home"
           className="text-xl font-bold font-mono text-accent glow-text"
         >
-          {"<Devendra />"}
+          {"<DS />"}
         </a>
 
         {/* Desktop links */}
