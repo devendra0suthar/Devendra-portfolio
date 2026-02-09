@@ -55,9 +55,17 @@ export default function Experience() {
                   <p className="text-foreground/50 font-mono text-sm mt-1">
                     {exp.company}
                   </p>
-                  <p className="text-foreground/60 mt-3 leading-relaxed text-sm">
-                    {exp.description}
-                  </p>
+                  <ul className="mt-3 space-y-2">
+                    {exp.bullets.map((bullet, i) => (
+                      <li
+                        key={i}
+                        className="text-foreground/60 text-sm leading-relaxed flex gap-2"
+                      >
+                        <span className="text-accent mt-1.5 shrink-0">&#8226;</span>
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </motion.div>

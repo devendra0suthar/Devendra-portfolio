@@ -85,8 +85,12 @@ export const experiences = [
     role: "Full Stack Developer",
     company: "Clutterbot",
     duration: "Nov 2023 - Dec 2025",
-    description:
-      "Integrated AWS S3 for direct data ingestion into the Data Annotation platform, improving data access speed. Optimized data handling and redesigned UI flows for a better annotation experience. Collaborated with annotators' team for real-time feedback to iteratively improve usability. Built features focused on productivity, performance, and workflow optimization.",
+    bullets: [
+      "Integrated AWS S3 to enable direct data ingestion into the Data Annotation platform, improving data access speed and reducing manual setup.",
+      "Optimized data handling and redesigned UI flows to create a more user-friendly annotation experience and improve annotator efficiency.",
+      "Collaborated closely with the annotators' team to gather real-time feedback and iteratively improve product usability.",
+      "Built and enhanced features focused on productivity, performance, and workflow optimization across the platform.",
+    ],
   },
 ];
 

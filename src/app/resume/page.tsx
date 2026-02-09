@@ -83,9 +83,17 @@ export default function ResumePage() {
                     {exp.duration}
                   </span>
                 </div>
-                <p className="text-foreground/60 mt-2 text-sm leading-relaxed">
-                  {exp.description}
-                </p>
+                <ul className="mt-2 space-y-1">
+                  {exp.bullets.map((bullet, j) => (
+                    <li
+                      key={j}
+                      className="text-foreground/60 text-sm leading-relaxed flex gap-2"
+                    >
+                      <span className="text-accent shrink-0">&#8226;</span>
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
