@@ -2,7 +2,8 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { experiences } from "@/data/portfolio";
+import { FiBookOpen } from "react-icons/fi";
+import { experiences, education } from "@/data/portfolio";
 
 export default function Experience() {
   const ref = useRef(null);
@@ -62,6 +63,44 @@ export default function Experience() {
             </motion.div>
           ))}
         </div>
+
+        {/* Education */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16 text-center mb-10"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            <span className="text-accent">Education</span>
+          </h2>
+          <div className="section-divider w-24 mx-auto mt-4" />
+        </motion.div>
+
+        {education.map((edu, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="max-w-xl mx-auto"
+          >
+            <div className="bg-card-bg border border-card-border rounded-xl p-6 hover:border-accent/30 transition-all duration-300 flex items-start gap-4">
+              <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent shrink-0 mt-1">
+                <FiBookOpen />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">{edu.degree}</h3>
+                <p className="text-foreground/50 font-mono text-sm mt-1">
+                  {edu.institution}
+                </p>
+                <span className="text-accent font-mono text-sm">
+                  {edu.duration}
+                </span>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

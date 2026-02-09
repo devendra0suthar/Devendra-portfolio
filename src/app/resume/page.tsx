@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { FiMail, FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
-import { personalInfo, skills, experiences, projects } from "@/data/portfolio";
+import { FiMapPin, FiPhone } from "react-icons/fi";
+import { personalInfo, skills, experiences, projects, education } from "@/data/portfolio";
 
 export default function ResumePage() {
   return (
@@ -21,7 +22,10 @@ export default function ResumePage() {
           <p className="text-xl text-foreground/60 font-mono mb-4">
             {personalInfo.title}
           </p>
-          <div className="flex items-center justify-center gap-6 text-sm text-foreground/50">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-foreground/50">
+            <span className="flex items-center gap-1">
+              <FiPhone /> {personalInfo.phone}
+            </span>
             <a
               href={`mailto:${personalInfo.email}`}
               className="flex items-center gap-1 hover:text-accent transition-colors"
@@ -44,6 +48,9 @@ export default function ResumePage() {
             >
               <FiLinkedin /> LinkedIn
             </a>
+            <span className="flex items-center gap-1">
+              <FiMapPin /> {personalInfo.location}
+            </span>
           </div>
         </div>
 
@@ -150,6 +157,28 @@ export default function ResumePage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Education */}
+        <section className="mb-8">
+          <h2 className="text-lg font-bold font-mono text-accent mb-4 uppercase tracking-wider">
+            // Education
+          </h2>
+          {education.map((edu, i) => (
+            <div key={i} className="border-l-2 border-accent/30 pl-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-bold text-lg">{edu.degree}</h3>
+                  <p className="text-foreground/50 font-mono text-sm">
+                    {edu.institution}
+                  </p>
+                </div>
+                <span className="text-accent font-mono text-sm whitespace-nowrap">
+                  {edu.duration}
+                </span>
+              </div>
+            </div>
+          ))}
         </section>
 
         {/* Actions */}

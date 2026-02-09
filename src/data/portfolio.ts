@@ -2,17 +2,20 @@ export const personalInfo = {
   name: "Devendra Suthar",
   title: "Full-Stack Developer",
   taglines: [
-    "I build modern web applications.",
-    "I craft scalable full-stack solutions.",
-    "I design intuitive user experiences.",
-    "I turn ideas into production code.",
+    "I build scalable, data-driven web apps.",
+    "I craft seamless full-stack experiences.",
+    "I optimize workflows and performance.",
+    "I turn ideas into production-ready systems.",
   ],
-  bio: `I'm a passionate Full-Stack Developer with hands-on experience building
-modern web applications using TypeScript, React, Next.js, and Node.js. From
-learning management platforms to real-time collaborative apps, I love turning
-ideas into polished, production-ready products. I thrive on solving complex
-problems across the entire stack and continuously exploring new technologies.`,
-  email: "devendra.suthar@example.com",
+  bio: `Full-Stack Developer with 2 years of experience building scalable, data-driven
+web applications using React, Next.js, Node.js, Express, and MongoDB. Proven experience
+integrating AWS S3 for high-performance data ingestion, optimizing data workflows, and
+designing user-friendly interfaces for productivity-focused tools. Strong background in
+delivering end-to-end features, collaborating with users for real-time feedback, and
+building reliable, production-ready systems.`,
+  email: "devendra0suthar@gmail.com",
+  phone: "+91 8824035499",
+  location: "Jodhpur, Rajasthan, India",
   github: "https://github.com/devendra0suthar",
   linkedin: "https://www.linkedin.com/in/devendra-suthar/",
   twitter: "https://twitter.com/",
@@ -26,33 +29,33 @@ export const skills = {
     { name: "React", icon: "SiReact" },
     { name: "Next.js", icon: "SiNextdotjs" },
     { name: "TypeScript", icon: "SiTypescript" },
+    { name: "Redux", icon: "SiRedux" },
     { name: "Tailwind CSS", icon: "SiTailwindcss" },
-    { name: "HTML5", icon: "SiHtml5" },
-    { name: "CSS3", icon: "SiCss3" },
+    { name: "HTML/CSS", icon: "SiHtml5" },
   ],
-  Backend: [
+  "Backend & Database": [
     { name: "Node.js", icon: "SiNodedotjs" },
-    { name: "Express", icon: "SiExpress" },
-    { name: "Python", icon: "SiPython" },
-    { name: "PostgreSQL", icon: "SiPostgresql" },
+    { name: "Express.js", icon: "SiExpress" },
     { name: "MongoDB", icon: "SiMongodb" },
+    { name: "PostgreSQL", icon: "SiPostgresql" },
+    { name: "Prisma", icon: "SiPrisma" },
+    { name: "AWS S3", icon: "SiAmazon" },
+  ],
+  "Real-Time & APIs": [
+    { name: "Socket.io", icon: "SiSocketdotio" },
+    { name: "WebRTC", icon: "SiWebrtc" },
+    { name: "REST APIs", icon: "SiPostman" },
+    { name: "NextAuth.js", icon: "SiNextdotjs" },
     { name: "GraphQL", icon: "SiGraphql" },
+    { name: "Vercel", icon: "SiVercel" },
   ],
-  DevOps: [
-    { name: "Docker", icon: "SiDocker" },
-    { name: "AWS", icon: "SiAmazon" },
+  "Tools & Practices": [
     { name: "Git", icon: "SiGit" },
-    { name: "GitHub Actions", icon: "SiGithubactions" },
-    { name: "Linux", icon: "SiLinux" },
-    { name: "Vercel", icon: "SiVercel" },
-  ],
-  Tools: [
-    { name: "Vercel", icon: "SiVercel" },
-    { name: "Figma", icon: "SiFigma" },
-    { name: "Postman", icon: "SiPostman" },
-    { name: "Jira", icon: "SiJira" },
-    { name: "Redis", icon: "SiRedis" },
-    { name: "Firebase", icon: "SiFirebase" },
+    { name: "GitHub", icon: "SiGithub" },
+    { name: "Cursor", icon: "SiFigma" },
+    { name: "Claude AI", icon: "SiFirebase" },
+    { name: "Clean Architecture", icon: "SiLinux" },
+    { name: "UI/UX Design", icon: "SiFigma" },
   ],
 };
 
@@ -60,8 +63,8 @@ export const projects = [
   {
     title: "LMS Platform",
     description:
-      "A full-featured Learning Management System for creating, managing, and consuming online courses. Built with a modern stack and deployed on Vercel.",
-    tags: ["TypeScript", "Next.js", "React", "Vercel"],
+      "Built a full-stack LMS with secure role-based access for students and admins. Admins can create and manage courses and track student progress. Students can view courses, track learning progress, and mark courses as completed.",
+    tags: ["Next.js", "React", "MongoDB", "NextAuth.js", "Tailwind CSS", "Vercel"],
     image: "/projects/lms.png",
     liveUrl: "https://lms-platform-flame-theta.vercel.app",
     githubUrl: "https://github.com/devendra0suthar/-lms-platform-",
@@ -69,8 +72,8 @@ export const projects = [
   {
     title: "WatchParty",
     description:
-      "A real-time watch party application that lets users watch videos together in sync with friends. Features collaborative viewing experience.",
-    tags: ["TypeScript", "React", "Real-Time", "Vercel"],
+      "A real-time watch-party app that lets users create private chat rooms and invite friends. Stream and enjoy movies or videos together while communicating through live chat, providing a synchronized and interactive group-watching experience.",
+    tags: ["Next.js", "React", "TypeScript", "Socket.io", "Prisma", "PostgreSQL", "WebRTC"],
     image: "/projects/watchparty.png",
     liveUrl: "https://watchparty-lac.vercel.app",
     githubUrl: "https://github.com/devendra0suthar/watchparty",
@@ -79,25 +82,19 @@ export const projects = [
 
 export const experiences = [
   {
-    role: "Senior Full-Stack Developer",
-    company: "Tech Corp",
-    duration: "2023 - Present",
+    role: "Full Stack Developer",
+    company: "Clutterbot",
+    duration: "Nov 2023 - Dec 2025",
     description:
-      "Leading development of microservices architecture, mentoring junior devs, and building customer-facing features serving 100K+ users.",
+      "Integrated AWS S3 for direct data ingestion into the Data Annotation platform, improving data access speed. Optimized data handling and redesigned UI flows for a better annotation experience. Collaborated with annotators' team for real-time feedback to iteratively improve usability. Built features focused on productivity, performance, and workflow optimization.",
   },
+];
+
+export const education = [
   {
-    role: "Full-Stack Developer",
-    company: "StartupXYZ",
-    duration: "2021 - 2023",
-    description:
-      "Built and shipped the core product from MVP to production. Implemented CI/CD pipelines, REST APIs, and responsive frontend interfaces.",
-  },
-  {
-    role: "Frontend Developer",
-    company: "Digital Agency",
-    duration: "2019 - 2021",
-    description:
-      "Developed responsive websites and web apps for 20+ clients. Focused on React, performance optimization, and accessibility.",
+    degree: "Bachelor of Science",
+    institution: "Indian Institute of Technology, Jodhpur",
+    duration: "2020 - 2023",
   },
 ];
 
