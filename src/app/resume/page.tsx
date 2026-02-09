@@ -155,7 +155,7 @@ export default function ResumePage() {
         {/* Actions */}
         <div className="flex items-center justify-center gap-4 mt-12 pt-8 border-t border-card-border">
           <a
-            href={personalInfo.resumeUrl}
+            href={personalInfo.resumePdfUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-background font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 glow"

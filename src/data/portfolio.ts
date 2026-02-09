@@ -16,7 +16,8 @@ problems across the entire stack and continuously exploring new technologies.`,
   github: "https://github.com/devendra0suthar",
   linkedin: "https://www.linkedin.com/in/devendra-suthar/",
   twitter: "https://twitter.com/",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume",
+  resumePdfUrl: "/resume.pdf",
   avatarUrl: "https://avatars.githubusercontent.com/u/49274867?v=4",
 };
 
