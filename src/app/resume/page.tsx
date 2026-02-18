@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiMail, FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin, FiDownload, FiGlobe } from "react-icons/fi";
 import { FiMapPin, FiPhone } from "react-icons/fi";
 import { personalInfo, skills, experiences, projects, education } from "@/data/portfolio";
 
@@ -47,6 +47,12 @@ export default function ResumePage() {
               className="flex items-center gap-1 hover:text-accent transition-colors"
             >
               <FiLinkedin /> LinkedIn
+            </a>
+            <a
+              href="/"
+              className="flex items-center gap-1 hover:text-accent transition-colors"
+            >
+              <FiGlobe /> Portfolio
             </a>
             <span className="flex items-center gap-1">
               <FiMapPin /> {personalInfo.location}
