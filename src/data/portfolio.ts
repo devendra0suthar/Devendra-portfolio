@@ -95,9 +95,9 @@ export const experiences = [
 
 export const education = [
   {
-    degree: "Bachelor of Science",
-    institution: "Indian Institute of Technology, Jodhpur",
-    duration: "2020 - 2023",
+    degree: "Bachelor of Science in Data Science",
+    institution: "Indian Institute of Technology, Madras",
+    duration: "",
   },
 ];
 
