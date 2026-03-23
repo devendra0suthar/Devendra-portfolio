@@ -20,7 +20,7 @@ building reliable, production-ready systems.`,
   linkedin: "https://www.linkedin.com/in/devendra-suthar/",
   twitter: "https://twitter.com/",
   resumeUrl: "/resume",
-  resumePdfUrl: "/resume.pdf",
+  resumePdfUrl: "/resume.pdf?v=2",
   avatarUrl: "https://avatars.githubusercontent.com/u/49274867?v=4",
 };
 
